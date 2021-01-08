@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Metasploit CTF 2020"
-date: 2021-01-01
+date: 2021-01-02
 ---
 
 [https://metasploitctf.com/](https://metasploitctf.com/)

@@ -42,6 +42,7 @@ ul{
 li{
     list-style-position: inside;
     list-style-type: disclosure-closed;
+    color: #333;
 }
 
 footer {
@@ -65,4 +66,10 @@ ul.posts li a{
 
 #results-container li a{
     text-transform: lowercase;
+}
+
+code {
+    background: #333;
+    padding: 2px;
+    color: #00ffcf;
 }
