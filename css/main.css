@@ -28,16 +28,20 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+ul{
+    padding-left: 0;
+}
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
 ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+    margin: 20px auto 40px;
 }
 
 ul.posts li {
     list-style: none;
+    text-transform: lowercase;
+    color: #ddd;
 }
