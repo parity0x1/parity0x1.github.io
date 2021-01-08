@@ -34,10 +34,11 @@ ul{
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
+    margin-top: 60px;
 }
 
 ul.posts { 
-    margin: 20px auto 40px;
+    margin: 20px auto 0px;
 }
 
 ul.posts li {
@@ -45,6 +46,6 @@ ul.posts li {
     color: #ddd;
 }
 
-ul.posts li q{
+ul.posts li a{
     text-transform: lowercase;
 }
