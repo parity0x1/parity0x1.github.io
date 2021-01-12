@@ -48,4 +48,4 @@ Challenge3.zip                      ->      3.zip
 
 ![](/assets/hshtb/hshtb-0x04-04.png)
 
-7. We could now submit the final flag: `HTBS{ReLeAs3_tHe_CrAcK!nG}`
+7. We could now submit the final flag: `HTBSA{ReLeAs3_tHe_CrAcK!nG}`
