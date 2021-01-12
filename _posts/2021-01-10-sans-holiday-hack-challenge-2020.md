@@ -249,7 +249,7 @@ Open the HID lock in the Workshop. Talk to Bushy Evergreen near the talk tracks 
 
 ![](/assets/shhc2020/05-01.png)
 
-2. We also found a proxmark3 lying around which we grabbed. I'm sure we're going to need this to open the HID lock in the workshop.
+2. We also found a Proxmark3 lying around which we grabbed. I'm sure we're going to need this to open the HID lock in the workshop.
 3. Let's stroll on down to Fitzy and see what he has to say. He needs help turning on the Christmas tree lights... but the dial-up modem is broken. The phone number is 756-8347, can we help with the [handshake sequence](https://upload.wikimedia.org/wikipedia/commons/3/33/Dial_up_modem_noises.ogg)?
 4. Using the telephone, my guess is that we need to mimic the handshale sequenze. Time to speak dial-up.
 
@@ -261,7 +261,7 @@ Open the HID lock in the Workshop. Talk to Bushy Evergreen near the talk tracks 
 ![](/assets/shhc2020/05-03.png)
 
 7. In the workshop we encounter a locked door, perhaps I need to help Minty Candycane fix the Sort-O-Matic before I can get in. Bring out the regular expressions.
-8. Dammit, the door is still locked. Wait a minute... I know I can clone a card with Proxmark, I wonder if I can simulate one too. After some Google research I stumpled across this [cheatsheet](https://cheatography.com/countparadox/cheat-sheets/proxmark3/) and there it was, `lf hid sim -r <tag ID>`
+8. Dammit, the door is still locked. Wait a minute... I know I can clone a card with Proxmark3, I wonder if I can simulate one too. After some Google research I stumpled across this [cheatsheet](https://cheatography.com/countparadox/cheat-sheets/proxmark3/) and there it was, `lf hid sim -r <tag ID>`
 
 ![](/assets/shhc2020/05-05.png)
 
@@ -395,7 +395,7 @@ Example: 0x17A - 00 00 01 = Unlock
 
 ![](/assets/shhc2020/07-02.png)
 
-4. [I know Kung Fu!](https://www.youtube.com/watch?v=0YhJxJZOWBw) So let's tackle the main challenge now. We're presented with a control panel, a comparison operator and a live candump log. The only thing I can think of is to work methodically through each control and map the CAN ID and data chunks to the controls, hoping tospot something out of the ordinary.
+4. [I know Kung Fu!](https://www.youtube.com/watch?v=0YhJxJZOWBw) So let's tackle the main challenge now. We're presented with a control panel, a comparison operator and a live candump log. The only thing I can think of is to work methodically through each control and map the CAN ID and data chunks to the controls, hoping to spot something out of the ordinary.
 
 ```
 19B#000000000000 = Lock
@@ -425,14 +425,14 @@ Help Noel Boetie fix the [Tag Generator](https://tag-generator.kringlecastle.com
 ### Hints
 
 1. We might be able to find the problem if we can get source code!
-- Can you figure out the path to the script? It's probably on error pages!
-- Once you know the path to the file, we need a way to download it!
-- Is there an endpoint that will print arbitrary files?
-- If you're having trouble seeing the code, watch out for the Content-Type! Your browser might be trying to help (badly)!
-- I'm sure there's a vulnerability in the source somewhere... surely Jack wouldn't leave their mark?
-- If you find a way to execute code blindly, I bet you can redirect to a file then download that file!
-- Remember, the processing happens in the background so you might need to wait a bit after exploiting but before grabbing the output!
-- Blind command injection can be frustrating. Do you think output redirection would help.
+2. Can you figure out the path to the script? It's probably on error pages!
+3. Once you know the path to the file, we need a way to download it!
+4. Is there an endpoint that will print arbitrary files?
+5. If you're having trouble seeing the code, watch out for the Content-Type! Your browser might be trying to help (badly)!
+6. I'm sure there's a vulnerability in the source somewhere... surely Jack wouldn't leave their mark?
+7. If you find a way to execute code blindly, I bet you can redirect to a file then download that file!
+8. Remember, the processing happens in the background so you might need to wait a bit after exploiting but before grabbing the output!
+9. Blind command injection can be frustrating. Do you think output redirection would help.
 
 ### Solution
 
@@ -462,7 +462,7 @@ https://tag-generator.kringlecastle.com/image [BINGO!]
 ![](/assets/shhc2020/08-03.png)
 
 4. Now that I knew the path, I just had to figure out a way to download it by manipulating an endpoint that printed arbitrary files. The search continued...after trying in the browser for about an hour I remembered the hint that browsers can behave badly and so maybe I would have more luck using `curl https://tag-generator.kringlecastle.com/image?id=../app/lib/app.rb --output source.rb`. This worked and I now had a local copy of the [source code](/assets/source.rb) for auditing purposes.
-5. I don't really know Ruby so before going down that route I wanted to see if there wasn't a way I could grab the environment variable with the LFI (local file inclusion). I found this [article](https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601) while researching "Ruby local file inclusion exploit" which mentioned something about a `/proc/self/environ` file. Some more research reveals that [in Linux based system the environment-variables of the current process (self) can be accessed via /proc/self/environ. ](http://www.sec-art.net/2019/01/exploiting-local-file-inclusion-lfi.html). Surely it couldn't be this easy as there we still some unused hints? Spoiler alert, it was!
+5. I don't really know Ruby so before going down that route I wanted to see if there wasn't a way I could grab the environment variable with the LFI (local file inclusion). I found this [article](https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601) while researching "Ruby local file inclusion exploit" which mentioned something about a `/proc/self/environ` file. Some more research reveals that [in Linux based system the environment-variables of the current process (self) can be accessed via /proc/self/environ. ](http://www.sec-art.net/2019/01/exploiting-local-file-inclusion-lfi.html). Surely it couldn't be this easy as there were still some unused hints? Spoiler alert, it was!
 
 ![](/assets/shhc2020/08-04.png)
 
