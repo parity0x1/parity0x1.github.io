@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
-    width: 70%;
+    width: 100%;
+    max-width: 800px;
 }
 
 nav ul, footer ul {
@@ -43,6 +44,7 @@ li{
     list-style-position: inside;
     list-style-type: disclosure-closed;
     color: #333;
+    margin-bottom: 15px;
 }
 
 footer {
@@ -58,9 +60,23 @@ ul.posts {
 ul.posts li {
     list-style: none;
     color: #ccc;
+    margin-bottom: 0px;
 }
 
 ul.posts li a{
+    text-transform: lowercase;
+}
+
+ul.tools { 
+    margin: 20px auto 0px;
+}
+
+ul.tools li {
+    list-style: none;
+    color: #ccc;
+}
+
+ul.tools li a{
     text-transform: lowercase;
 }
 
@@ -70,6 +86,34 @@ ul.posts li a{
 
 code {
     background: #333;
-    padding: 2px;
+    padding: 10px;
     color: #00ffcf;
+    display: block;
+    overflow: auto;
+}
+
+p > code, li > code{
+    display: inline;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+
+img{
+    width: 100%;
+}
+
+blockquote {
+    border-left: solid 5px #00ffa9;
+    margin-left: 0;
+    padding-left: 15px;
+    font-style: italic;
+}
+
+hr {
+    background: #eee;
+    border: none;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: 50px 0 50px;
 }

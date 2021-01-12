@@ -5,4 +5,19 @@ title: /home/parity0x1
 <div class="blurb">
 	<h1>/home/parity0x1</h1>
 	<p><em>A parity bit is a check bit, which is added to a block of data for error detection purposes. It is used to validate the integrity of the data. The value of the parity bit is assigned either 0 or 1 that makes the number of 1s in the message block either even or odd depending upon the type of parity.</em></p>
-</div><!-- /.blurb -->
+</div>
+
+<div id="search-container">
+    find /home/parity0x1/writeups/ -type f -iname <input type="text" id="search-input" placeholder="search...">
+    <ul id="results-container"></ul>
+</div>
+
+<script src="/js/search.js" type="text/javascript"></script>
+
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+    })
+</script>
