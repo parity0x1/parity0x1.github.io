@@ -227,8 +227,6 @@ Talk to Pepper Minstix in the entryway to get some hints about the Santavator.
 
 ### Solution
 
-You'll need a key (Sparkle Redberry) and other odd objects. Use them to split, redirect and colour the santavator. Power red, yellow and green recievers. 
-
 1. This one was pretty straight forward (or so I thought). I started off by speaking to Sparkle so I could get the panel key.
 2. I then wandered around the Lobby (Castle Ground) collecting all of the odd objects that I could find.
 3. I entered the santavator, opened the panel using the key and diverted the stream of light through the green bulb to the green receiver. I could now move to another (green) floor.

@@ -41,8 +41,8 @@ ul{
 }
 
 li{
-    list-style-position: inside;
-    list-style-type: disclosure-closed;
+    list-style-position: outside;
+    list-style-type: square;
     color: #333;
     margin-bottom: 15px;
 }
