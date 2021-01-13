@@ -26,7 +26,7 @@ LetsHashThisOut(Challenge 2).txt    ->      2.txt
 Challenge3.zip                      ->      3.zip
 ```
 
-2. I started with **2.txt** as the contents of the file looked like a standard `brypt` hash. I noticed an additional whitespace at the end so I removed that quickly. To confirm, I copied the hash and dropped it in https://hashes.com/en/decrypt/hash/.
+2. I started with **2.txt** as the contents of the file looked like a standard `bcrypt` hash. I noticed an additional whitespace at the end so I removed that quickly. To confirm, I copied the hash and dropped it in https://hashes.com/en/decrypt/hash/.
 
 ![](/assets/hshtb/hshtb-0x04-01.png)
 
