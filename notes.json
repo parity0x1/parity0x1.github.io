@@ -1,0 +1,10 @@
+---
+---
+[
+  {% for note in site.notes %}
+    {
+
+      "content"    : "{{ note.content }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

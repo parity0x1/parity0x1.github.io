@@ -1,3 +1,6 @@
 name: parity0x1
 markdown: kramdown
 permalink: /writeups/:year/:month/:day/:title
+collections:
+  notes:
+    output: true
