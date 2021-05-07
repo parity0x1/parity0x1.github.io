@@ -1,9 +1,11 @@
 body {
-    margin: 60px auto;
+    padding: 30px;
     width: 100%;
-    max-width: 600px;
-    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
     font-family: sans-serif;
+    overflow: scroll; /* Show scrollbars */
 }
 
 nav ul, footer ul {
@@ -38,12 +40,12 @@ p {
     color: #333;
 }
 
-ul{
+ul, ol{
     padding-left: 0;
 }
 
 li{
-    list-style-position: outside;
+    list-style-position: inside;
     list-style-type: square;
     color: #333;
     margin-bottom: 5px;

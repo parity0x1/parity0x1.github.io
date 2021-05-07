@@ -3,8 +3,10 @@
 [
   {% for note in site.notes %}
     {
-
-      "content"    : "{{ note.content }}"
+      "title" : "{{ note.title | escape }}",
+      "keywords" : "{{ note.keywords }}",
+      "url" : "{{ note.url }}",
+      "content" : {{ note.content | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
