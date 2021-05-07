@@ -3,7 +3,7 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 14px;
     font-family: sans-serif;
     overflow: scroll; /* Show scrollbars */
 }
@@ -34,10 +34,14 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     text-transform: lowercase;
 }
+h4{
+    margin-bottom: 5px;
+}
 
 p {
     line-height: 1.4em;
     color: #333;
+    margin-top: 0;
 }
 
 ul, ol{
