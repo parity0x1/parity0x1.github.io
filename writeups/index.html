@@ -3,9 +3,24 @@ layout: default
 title: /home/parity0x1/writeups
 ---
 	<h1>{{ page.title }}</h1>
-	<ul class="posts">
 
+	<div id="search-container">
+		grep -rnw /home/parity0x1/writeups/ -e <input type="text" id="search-input" placeholder="search...">
+		<div id="results-container"></div>
+	</div>
+
+	<ul class="posts">
 	  {% for post in site.posts %}
 	    <li><span>-rwxr--r-- 1 parity0x1 parity0x1 {{ post.date | date: "%Y %b %d" }} </span> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>
+
+	<script src="/js/search.js" type="text/javascript"></script>
+	
+	<script>
+		SimpleJekyllSearch({
+			searchInput: document.getElementById('search-input'),
+			resultsContainer: document.getElementById('results-container'),
+			json: '/search.json'
+		})
+	</script>

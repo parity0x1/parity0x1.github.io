@@ -11,6 +11,12 @@ title: /home/parity0x1/notes
 
 <script src="/js/search.js" type="text/javascript"></script>
 
+<ul class="posts">
+    {% for note in site.notes %}
+      <li><span>-rwxr--r-- 1 parity0x1 parity0x1 {{ note.date | date: "%Y %b %d" }} </span> <a href="{{ note.url }}" title="{{ note.title }}">{{ note.title }}</a></li>
+    {% endfor %}
+  </ul>
+
 <script>
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
