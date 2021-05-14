@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cURL"
+title: "curl"
 keywords: "curl, lfi"
 ---
 #### Read local file
