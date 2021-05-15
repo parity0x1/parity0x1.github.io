@@ -4,7 +4,7 @@ title: "HTB Cyber Apocalypse CTF 2021"
 date: 2021-04-25
 ---
 
-A 5 crazy and intense days, the Cyber Apocalypse CTF 2021 ran from Monday, 19th of April 2021 until Friday, 23rd of April 2021. Flagged (excuse the pun) as a must-attend event for every cybersecurity enthusiast, my team Hack South saw two separate teams enter the races. Our particular team ended off the event placing a respectable `106 out of 4,700` of teams.  
+A 5 crazy and intense days, the Cyber Apocalypse CTF 2021 ran from Monday, 19th of April 2021 until Friday, 23rd of April 2021. Flagged (excuse the pun) as a must-attend event for every cybersecurity enthusiast, my team Hack South saw two separate teams enter the races. Our particular team ended off the event placing a respectable `106 out of 4,700` teams.  
 
 Here is a [full event recap](https://www.hackthebox.eu/newsroom/cyber-apocalypse-ctf-2021-event-recap) from the organisers if you're interested.
 
