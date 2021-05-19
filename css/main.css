@@ -102,6 +102,7 @@ code {
     color: #00ffcf;
     display: block;
     overflow: auto;
+    white-space : pre-wrap !important;
 }
 
 p > code, li > code{
