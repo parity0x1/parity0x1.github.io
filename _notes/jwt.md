@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bypassing JWT using remote KID"
+title: "jwt"
 keywords: "jwt, json, token, kid, web token"
 ---
 

