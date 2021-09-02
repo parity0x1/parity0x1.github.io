@@ -25,3 +25,8 @@ keywords: "csrf, xsrf, cross-site request forgery"
 
 1. Try remove the `xsrf_token` completely
 2. Reusable? Guess the xsrf token eg. `base64(user_id)` (try decode in CyberChef)
+
+#### XSRF Probe
+```
+xsrfprobe -u <url>/<endpoint>
+```
