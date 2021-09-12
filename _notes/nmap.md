@@ -9,5 +9,5 @@ keywords: "scanning, nmap"
 -oN: Output scan in normal
 
 ```
-sudo nmap -sCV $IP -oN nmap
+sudo nmap -sC -sV $IP -oN nmap
 ```
