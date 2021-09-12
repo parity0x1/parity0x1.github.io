@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "telent"
+title: "telnet"
 keywords: "telnet"
 ---
 
