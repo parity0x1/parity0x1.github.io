@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "brute-forcing"
-keywords: "brute, wfuzz"
+keywords: "brute, hydra"
 ---
 ### Hydra
 ```
