@@ -3,6 +3,9 @@ layout: post
 title: "xss"
 keywords: "xss, iframe, cookie"
 ---
+
+[XSS Payloads](https://github.com/nettitude/xss_payloads)
+
 #### Identification
 Check the context (inspect element)
 ```
